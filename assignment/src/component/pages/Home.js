@@ -25,7 +25,13 @@ const Home = () => {
         <h1>Home Page</h1>
         <table class="table border shadow">
           <thead class="thead-dark">
-           
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Name</th>
+              <th scope="col">User Name</th>
+              <th scope="col">Email</th>
+              <th>Action</th>
+            </tr>
           </thead>
           <tbody>
             {users.map((user, index) => (
