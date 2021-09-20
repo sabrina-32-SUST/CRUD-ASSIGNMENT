@@ -9,6 +9,23 @@ const Home = () => {
     loadUsers();
   }, []);
 
-  
+  const loadUsers = async () => {
+    const result = await axios.get("http://localhost:3003/users");
+    setUser(result.data.reverse());
+  };
+
+  const deleteUser = async id => {
+    await axios.delete(`http://localhost:3003/users/${id}`);
+    loadUsers();
+  };
+
+  return (
+    <div className="container">
+      <div className="py-4">
+        <h1>Home Page</h1>
+         </div>
+    </div>
+  );
+};
 
 export default Home;
