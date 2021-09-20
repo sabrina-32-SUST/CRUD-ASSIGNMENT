@@ -12,6 +12,7 @@ import {
   withRouter
 } from "react-router-dom";
 import NotFound from "./component/pages/NotFound";
+import AddUser from "./component/users/AddUser";
 
 
 function App(props) {
@@ -24,7 +25,8 @@ function App(props) {
           <Route exact path="/" component={Home} />
           <Route exact path="/about" component={About} />
           <Route exact path="/contact" component={Contact} />
-         
+          <Route exact path="/users/add" component={AddUser} />
+
           <Route component={NotFound} />
         </Switch>
       </div>

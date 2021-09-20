@@ -41,17 +41,18 @@ const Home = () => {
                 <td>{user.username}</td>
                 <td>{user.email}</td>
                 <td>
-                  <Link class="btn btn-primary mr-2" to={`/users/${user.id}`}>
+                  <Link class="btn btn-primary mr-20" 
+                  to={`/users/${user.id}`}>
                     View
                   </Link>
                   <Link
-                    class="btn btn-outline-primary mr-2"
+                    class="btn btn-outline-primary mr-20"
                     to={`/users/edit/${user.id}`}
                   >
                     Edit
                   </Link>
                   <Link
-                    class="btn btn-danger"
+                    class="btn btn-danger mr-2"
                     onClick={() => deleteUser(user.id)}
                   >
                     Delete
