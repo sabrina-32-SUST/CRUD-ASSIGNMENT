@@ -4,17 +4,25 @@ import Home from "./component/pages/Home";
 import About from './component/pages/About';
 import Contact from './component/pages/Contact';
 import Navbar from './component/layout/navbar';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
 function App() {
   return (
-    <div className="App">
+    <Router>
+      <div className="App">
 
-<Navbar />
-     <Home />
-     <About />
-     <Contact />
+        <Navbar />
 
+        <Switch>
+          <Route exact path="/" component = {Home} />
+         
+          <Route exact path="/" component = {About} />
+          <Route exact path="/" component = {Contact} />
 
-    </div>
+          </Switch>
+
+      </div>
+    </Router>
   );
 }
 
