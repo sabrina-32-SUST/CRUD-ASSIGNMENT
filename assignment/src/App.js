@@ -11,6 +11,7 @@ import {
   Switch,
   withRouter
 } from "react-router-dom";
+import NotFound from './component/pages/NotFound';
 function App() {
   return (
     <Router>
@@ -21,7 +22,7 @@ function App() {
         <Route exact path="/home" component={Home} />
         <Route exact path="/about" component={About} />
         <Route exact path="/contact" component={Contact} />
-       
+        <Route   component={NotFound} />
       </Switch>
     </div>
   </Router>
