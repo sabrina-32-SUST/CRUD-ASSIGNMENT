@@ -1,28 +1,30 @@
 import './App.css';
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
-import Home from "./component/pages/Home";
+import Home from './component/pages/Home';
+
 import About from './component/pages/About';
 import Contact from './component/pages/Contact';
 import Navbar from './component/layout/navbar';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  withRouter
+} from "react-router-dom";
 function App() {
   return (
     <Router>
-      <div className="App">
+    <div className="App">
+      <Navbar />
 
-        <Navbar />
-
-        <Switch>
-          <Route exact path="/" component = {Home} />
-         
-          <Route exact path="/" component = {About} />
-          <Route exact path="/" component = {Contact} />
-
-          </Switch>
-
-      </div>
-    </Router>
+      <Switch>
+        <Route exact path="/home" component={Home} />
+        <Route exact path="/about" component={About} />
+        <Route exact path="/contact" component={Contact} />
+       
+      </Switch>
+    </div>
+  </Router>
   );
 }
 
