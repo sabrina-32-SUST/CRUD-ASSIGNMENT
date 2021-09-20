@@ -26,6 +26,7 @@ function App(props) {
           <Route exact path="/about" component={About} />
           <Route exact path="/contact" component={Contact} />
           <Route exact path="/users/add" component={AddUser} />
+          <Route exact path="/users/add" component={AddUser} />
 
           <Route component={NotFound} />
         </Switch>
