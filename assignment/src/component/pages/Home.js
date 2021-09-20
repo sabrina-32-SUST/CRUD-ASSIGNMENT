@@ -35,29 +35,7 @@ const Home = () => {
           </thead>
           <tbody>
             {users.map((user, index) => (
-              <tr>
-                <th scope="row">{index + 1}</th>
-                <td>{user.name}</td>
-                <td>{user.username}</td>
-                <td>{user.email}</td>
-                <td>
-                  <Link class="btn btn-primary mr-2" to={`/users/${user.id}`}>
-                    View
-                  </Link>
-                  <Link
-                    class="btn btn-outline-primary mr-2"
-                    to={`/users/edit/${user.id}`}
-                  >
-                    Edit
-                  </Link>
-                  <Link
-                    class="btn btn-danger"
-                    onClick={() => deleteUser(user.id)}
-                  >
-                    Delete
-                  </Link>
-                </td>
-              </tr>
+              
             ))}
           </tbody>
         </table>
