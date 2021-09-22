@@ -5,7 +5,7 @@ const Navbar = () => {
     <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
       <div className="container">
         <Link className="navbar-brand" href="/">
-Library
+          Recat User
         </Link>
         <button
           className="navbar-toggler"
@@ -39,7 +39,7 @@ Library
           </ul>
         </div>
 
-        <Link className="btn btn-outline-light" to="/users/add">Add New Book</Link>
+        <Link className="btn btn-outline-light" to="/users/add">Add User</Link>
       </div>
     </nav>
   );
