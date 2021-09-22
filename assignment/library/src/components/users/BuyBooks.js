@@ -2,19 +2,19 @@ import React, { useState } from "react";
 import axios from 'axios'
 import { useHistory } from "react-router-dom";
 
-const BookBuy = () => {
+const Buybooks = () => {
   let history = useHistory();
   const [user, setUser] = useState({
-    title: "",
-    author: "",
-    price:"",
+    bookname: "", 
+    buyer: "",
+    address:"",
+      
+    copy: "",
+    totalprice: "",
 
-    publisher: "",  
-    isbn: "",
-    page: ""
   });
 
-  const { title, author,price, publisher, isbn, page,copy } = user;
+  const {  bookname,buyer,address, copy,totalprice } = user;
   const onInputChange = e => {
     setUser({ ...user, [e.target.name]: e.target.value });
   };
@@ -22,89 +22,78 @@ const BookBuy = () => {
   const onSubmit = async e => {
     e.preventDefault();
     await axios.post("http://localhost:3003/users", user);
-    history.push("/");
+    history.push("/purchased");
   };
   return (
     <div className="container">
       <div className="w-75 mx-auto shadow p-5">
-        <h2 className="text-center mb-4">Add A Book</h2>
+        <h2 className="text-center mb-4">Select Book</h2>
         <form onSubmit={e => onSubmit(e)}>
-          <div className="form-group">
+        <div className="form-group">
             <input
               type="text"
               className="form-control form-control-lg"
-              placeholder="Book Title"
-              name="title"
-              value={title}
+              placeholder="Enter Book  name"
+              name="bookname"
+              value={bookname}
               onChange={e => onInputChange(e)}
             />
           </div>
-          <div className="form-group">
+        <div className="form-group">
             <input
               type="text"
               className="form-control form-control-lg"
-              placeholder="Author"
-              name="author"
-              value={author}
+              placeholder="Enter Buyer Name"
+              name="buyer"
+              value={buyer}
               onChange={e => onInputChange(e)}
             />
+                    
+
           </div>
-          <div className="form-group">
-            <input
-              type="text"
-              className="form-control form-control-lg"
-              placeholder="Price"
-              name="price"
-              value={price}
-              onChange={e => onInputChange(e)}
-            />
-          </div>
-          <div className="form-group">
-            <input
-              type="text"
-              className="form-control form-control-lg"
-              placeholder="Publisher"
-              name="publisher"
-              value={publisher}
-              onChange={e => onInputChange(e)}
-            />
-          </div>
+         
          
           <div className="form-group">
             <input
               type="text"
               className="form-control form-control-lg"
-              placeholder="Enter ISBN Number"
-              name="isbn"
-              value={isbn}
+              placeholder="Enter Buyer Address"
+              name="address"
+              value={address}
               onChange={e => onInputChange(e)}
             />
+                    
+
           </div>
+         
+    
           <div className="form-group">
             <input
               type="text"
               className="form-control form-control-lg"
-              placeholder="Number of Pages	"
-              name="page"
-              value={page}
-              onChange={e => onInputChange(e)}
-            />
-          </div>
-          <div className="form-group">
-            <input
-              type="text"
-              className="form-control form-control-lg"
-              placeholder="Copy Left"
+              placeholder="How many copy?"
               name="copy"
               value={copy}
               onChange={e => onInputChange(e)}
             />
+
           </div>
-          <button className="btn btn-primary btn-block">Add Book</button>
+          <div className="form-group">
+            <input
+              type="numeric"
+              className="form-control form-control-lg"
+              placeholder="Enter Total Price"
+              name="totalprice"
+              value={totalprice}
+              onChange={e => onInputChange(e)}
+            />
+          </div>
+          
+          <button className="btn btn-primary btn-block">Place Order</button>
         </form>
       </div>
     </div>
   );
 };
 
-export default BookBuy;
+export default Buybooks;

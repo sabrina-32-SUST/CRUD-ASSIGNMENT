@@ -27,6 +27,11 @@ const Navbar = () => {
               </NavLink>
             </li>
             <li className="nav-item">
+              <NavLink className="nav-link" exact to="/buybook">
+                Buy a Book
+              </NavLink>
+            </li>
+            <li className="nav-item">
               <NavLink className="nav-link" exact to="/about">
                 About
               </NavLink>
