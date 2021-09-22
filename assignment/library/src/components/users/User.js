@@ -23,14 +23,17 @@ const User = () => {
       <Link className="btn btn-primary" to="/">
         back to Home
       </Link>
-      <h1 className="display-4">User Id: {id}</h1>
+      <h1 className="display-4">Book Id: {id}</h1>
       <hr />
       <ul className="list-group w-50">
-        <li className="list-group-item">name: {user.name}</li>
-        <li className="list-group-item">user name: {user.username}</li>
-        <li className="list-group-item">email: {user.email}</li>
-        <li className="list-group-item">phone: {user.phone}</li>
-        <li className="list-group-item">website: {user.website}</li>
+        <li className="list-group-item">Book Title: {user.title}</li>
+        <li className="list-group-item">Author Name: {user.author}</li>
+        <li className="list-group-item">Price: {user.price}</li>
+        <li className="list-group-item">Publisher Name: {user.publisher}</li>
+        <li className="list-group-item">ISBN Number: {user.isbn}</li>
+        <li className="list-group-item">Number of Pages	: {user.page}</li>
+        <li className="list-group-item">        Copy Left: {user.copy}</li>
+
       </ul>
     </div>
   );

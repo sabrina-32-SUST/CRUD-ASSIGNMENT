@@ -2,34 +2,49 @@
   "users": [
     {
       "id": 1,
-      "name": "Leanne Graham",
-      "username": "Bret",
-      "email": "Sincere@april.biz",
-      "address": {
-        "street": "Kulas Light",
-        "suite": "Apt. 556",
-        "city": "Gwenborough",
-        "zipcode": "92998-3874",
-        "geo": {
-          "lat": "-37.3159",
-          "lng": "81.1496"
-        }
-      },
-      "phone": "1-770-736-8031 x56442",
-      "website": "hildegard.org",
-      "company": {
-        "name": "Romaguera-Crona",
-        "catchPhrase": "Multi-layered client-server neural-net",
-        "bs": "harness real-time e-markets"
-      }
+      "title": "The Godfather",
+      "author": "Mario Puzo      ",
+      "publisher": "Random House",
+      "isbn": "9780099528128      ",
+      "price": "450",
+      "page": "595",
+      "copy": "100"
     },
     {
-      "name": "Sabrina Nusrat Ayvi",
-      "username": "sabrina32",
-      "email": "sanutaayvi@gmail.com",
-      "phone": "01746350449mmm",
-      "website": "www.facebook.com/nushraat.sabrin",
-      "id": 2
+      "title": "Game of Thrones",
+      "author": "George R. R. Martin",
+      "publisher": "Harper Voyager ",
+      "isbn": "9780008122348",
+      "price": "500",
+      "page": "600",
+      "copy": "400"
+    },
+    {
+      "title": "Woman in Islamic Shariah",
+      "author": "Maulana Wahiduddin Khan",
+      "publisher": "Goodword",
+      "isbn": "9788187570318",
+      "price": "80",
+      "page": "160",
+      "copy": "50"
+    },
+    {
+      "title": "My Name is Red ",
+      "author": " Orhan Pamuk",
+      "publisher": "Faber and Feber Limited",
+      "isbn": "2014753836",
+      "price": "50",
+      "page": "688",
+      "copy": "30"
+    },
+    {
+      "title": "Hunger Games",
+      "author": "Suzanne Collins",
+      "publisher": "Scholastic",
+      "isbn": "9782014101409        ",
+      "price": "1000",
+      "page": "1169",
+      "copy": "190"
     }
   ]
 }

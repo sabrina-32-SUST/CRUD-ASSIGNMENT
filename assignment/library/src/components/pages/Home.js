@@ -27,9 +27,9 @@ const Home = () => {
           <thead class="thead-dark">
             <tr>
               <th scope="col">#</th>
-              <th scope="col">Name</th>
-              <th scope="col">User Name</th>
-              <th scope="col">Email</th>
+              <th scope="col">Book Name</th>
+              <th scope="col">Author Name</th>
+              <th scope="col">Price</th>
               <th>Action</th>
             </tr>
           </thead>
@@ -37,9 +37,9 @@ const Home = () => {
             {users.map((user, index) => (
               <tr>
                 <th scope="row">{index + 1}</th>
-                <td>{user.name}</td>
-                <td>{user.username}</td>
-                <td>{user.email}</td>
+                <td>{user.title}</td>
+                <td>{user.author}</td>
+                <td>{user.price}</td>
                 <td>
                   <Link class="btn btn-primary mr-2" to={`/users/${user.id}`}>
                     View
