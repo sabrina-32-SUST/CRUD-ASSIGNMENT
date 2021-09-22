@@ -6,14 +6,16 @@ const EditUser = () => {
   let history = useHistory();
   const { id } = useParams();
   const [user, setUser] = useState({
-    name: "",
-    username: "",
-    email: "",
-    phone: "",
-    website: ""
+    bookname: "",
+    author: "",
+    price: "",  
+    isbn: "",
+    page:"",
+    copy: ""
+
   });
 
-  const { name, username, email, phone, website } = user;
+  const { bookname, author, price, isbn, page,copy } = user;
   const onInputChange = e => {
     setUser({ ...user, [e.target.name]: e.target.value });
   };
@@ -41,9 +43,9 @@ const EditUser = () => {
             <input
               type="text"
               className="form-control form-control-lg"
-              placeholder="Enter Your Name"
-              name="name"
-              value={name}
+              placeholder="Enter Book  name"
+              name="bookname"
+              value={bookname}
               onChange={e => onInputChange(e)}
             />
           </div>
@@ -51,19 +53,9 @@ const EditUser = () => {
             <input
               type="text"
               className="form-control form-control-lg"
-              placeholder="Enter Your Username"
-              name="username"
-              value={username}
-              onChange={e => onInputChange(e)}
-            />
-          </div>
-          <div className="form-group">
-            <input
-              type="email"
-              className="form-control form-control-lg"
-              placeholder="Enter Your E-mail Address"
-              name="email"
-              value={email}
+              placeholder="Enter Author Name"
+              name="author"
+              value={author}
               onChange={e => onInputChange(e)}
             />
           </div>
@@ -71,9 +63,9 @@ const EditUser = () => {
             <input
               type="text"
               className="form-control form-control-lg"
-              placeholder="Enter Your Phone Number"
-              name="phone"
-              value={phone}
+              placeholder="Enter Books Price"
+              name="price"
+              value={price}
               onChange={e => onInputChange(e)}
             />
           </div>
@@ -81,13 +73,33 @@ const EditUser = () => {
             <input
               type="text"
               className="form-control form-control-lg"
-              placeholder="Enter Your Website Name"
-              name="website"
-              value={website}
+              placeholder="Enter Books ISBN Number"
+              name="isbn"
+              value={isbn}
               onChange={e => onInputChange(e)}
             />
           </div>
-          <button className="btn btn-warning btn-block">Update User</button>
+          <div className="form-group">
+            <input
+              type="text"
+              className="form-control form-control-lg"
+              placeholder="Enter Total Page Number"
+              name="page"
+              value={page}
+              onChange={e => onInputChange(e)}
+            />
+          </div>
+          <div className="form-group">
+            <input
+              type="text"
+              className="form-control form-control-lg"
+              placeholder="Copy  Available"
+              name="copy"
+              value={copy}
+              onChange={e => onInputChange(e)}
+            />
+          </div>
+          <button className="btn btn-warning btn-block">Update Book Details</button>
         </form>
       </div>
     </div>
